@@ -1,4 +1,4 @@
-project_id = "eseszrycueknuqmcwlik"
+project_id = "Your Project Id"
 
 [functions.send-notification]
 verify_jwt = false
