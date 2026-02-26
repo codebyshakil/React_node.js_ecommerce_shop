@@ -1,0 +1,52 @@
+project_id = "eseszrycueknuqmcwlik"
+
+[functions.send-notification]
+verify_jwt = false
+
+[functions.sslcommerz-init]
+verify_jwt = false
+
+[functions.sslcommerz-ipn]
+verify_jwt = false
+
+[functions.bkash-init]
+verify_jwt = false
+
+[functions.bkash-callback]
+verify_jwt = false
+
+[functions.nagad-init]
+verify_jwt = false
+
+[functions.nagad-callback]
+verify_jwt = false
+
+[functions.send-marketing-email]
+verify_jwt = false
+
+[functions.send-auth-email]
+verify_jwt = false
+
+[functions.delete-user]
+verify_jwt = false
+
+[functions.create-employee]
+verify_jwt = false
+
+[functions.manage-employee]
+verify_jwt = false
+
+[functions.paypal-create-order]
+verify_jwt = false
+
+[functions.paypal-capture-order]
+verify_jwt = false
+
+[functions.stripe-create-checkout]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.initial-setup]
+verify_jwt = false
