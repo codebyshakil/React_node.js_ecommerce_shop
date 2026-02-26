@@ -675,7 +675,7 @@ const MarketingEmailSettings = () => {
             <FormField label="Username" required><Input value={smtp.user} onChange={(e) => setSmtp({ ...smtp, user: e.target.value })} placeholder="your@email.com" /></FormField>
             <FormField label="Password" required><Input type="password" value={smtp.password} onChange={(e) => setSmtp({ ...smtp, password: e.target.value })} placeholder="••••••••" /></FormField>
             <FormField label="From Email" description="Sender address for marketing emails"><Input value={smtp.from_email} onChange={(e) => setSmtp({ ...smtp, from_email: e.target.value })} placeholder="marketing@yourdomain.com" /></FormField>
-            <FormField label="From Name" description="Display name in the From field"><Input value={smtp.from_name} onChange={(e) => setSmtp({ ...smtp, from_name: e.target.value })} placeholder="My Store" /></FormField>
+            <FormField label="From Name" description="Display name in the From field"><Input value={smtp.from_name} onChange={(e) => setSmtp({ ...smtp, from_name: e.target.value })} placeholder="CommerceX" /></FormField>
           </>
         )}
 

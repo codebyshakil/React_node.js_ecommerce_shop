@@ -68,7 +68,7 @@ async function sendEmail(to: string, subject: string, body: string) {
     await sendCommand('DATA');
 
     const emailContent = [
-      `From: PrimeTrade <${SMTP_FROM}>`,
+      `From: CommerceX <${SMTP_FROM}>`,
       `To: ${to}`,
       `Subject: ${subject}`,
       `MIME-Version: 1.0`,
@@ -141,7 +141,7 @@ Deno.serve(async (req) => {
     switch (type) {
       case 'order_confirmation': {
         subject = `Order Confirmation #${data.order_id?.slice(0, 8)}`;
-        body = `Dear Customer,\n\nYour order #${data.order_id?.slice(0, 8)} has been confirmed.\n\nTotal: ৳${Number(data.total).toFixed(2)}\nItems: ${data.item_count}\n\nWe will process your order shortly.\n\nThank you for shopping with PrimeTrade!`;
+        body = `Dear Customer,\n\nYour order #${data.order_id?.slice(0, 8)} has been confirmed.\n\nTotal: ৳${Number(data.total).toFixed(2)}\nItems: ${data.item_count}\n\nWe will process your order shortly.\n\nThank you for shopping with CommerceX!`;
         
         if (data.order_id) {
           const { data: order } = await supabaseAdmin.from('orders').select('user_id').eq('id', data.order_id).single();

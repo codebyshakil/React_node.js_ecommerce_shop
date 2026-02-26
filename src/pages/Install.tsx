@@ -51,7 +51,7 @@ const Install = () => {
           admin_email: adminEmail.trim().toLowerCase(),
           admin_password: adminPassword,
           admin_name: adminName.trim(),
-          site_title: 'My Store',
+          site_title: 'CommerceX',
           site_description: '',
           site_logo: '',
           currency_code: 'BDT',
@@ -98,8 +98,8 @@ const Install = () => {
               />
             </Field>
             <div className="bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground space-y-1">
-              <p>📌 <strong>কোথায় পাবেন:</strong> Supabase Dashboard → Settings → Database → Connection string → URI</p>
-              <p>⚠️ <code>[YOUR-PASSWORD]</code> এর জায়গায় আপনার ডেটাবেস পাসওয়ার্ড বসান</p>
+              <p>📌 <strong>Where You Find This:</strong> Supabase Dashboard → Settings → Database → Connection string → URI</p>
+              <p>⚠️ <code>[YOUR-PASSWORD]</code> Replace This with Your Database Password ( এর জায়গায় আপনার ডেটাবেস পাসওয়ার্ড বসান )</p>
             </div>
           </div>
         );
@@ -238,7 +238,7 @@ const Install = () => {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-4">
-          Powered by your e-commerce platform
+          Powered by Exceptional Software Tech
         </p>
       </div>
     </div>

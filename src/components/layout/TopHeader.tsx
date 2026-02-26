@@ -49,7 +49,7 @@ const TopHeader = ({ forceRelative = false }: { forceRelative?: boolean }) => {
   }, []);
 
   const h = headerData && typeof headerData === 'object' ? headerData as any : {};
-  const brandName = h.brand_name || 'PrimeTrade';
+  const brandName = h.brand_name || 'CommerceX';
   const tagline = h.tagline || 'Premium Goods';
   const logoHeight = typeof h.logo_height === 'number' ? h.logo_height : 50;
   const logoWidth = typeof h.logo_width === 'number' && h.logo_width > 0 ? h.logo_width : undefined;

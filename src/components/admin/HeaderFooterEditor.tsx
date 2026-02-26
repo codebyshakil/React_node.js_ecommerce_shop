@@ -70,7 +70,7 @@ export const HeaderFooterEditor = () => {
   if (!init && headerData !== undefined && footerData !== undefined) {
     const h = headerData && typeof headerData === 'object' ? headerData as any : {};
     setHeader({
-      brand_name: h.brand_name || 'PrimeTrade',
+      brand_name: h.brand_name || 'CommerceX',
       tagline: h.tagline || 'Premium Goods',
       description: h.description || '',
       search_placeholder: h.search_placeholder || 'Search products...',
@@ -97,10 +97,10 @@ export const HeaderFooterEditor = () => {
     });
     const f = footerData && typeof footerData === 'object' ? footerData as any : {};
     setFooter({
-      brand_name: f.brand_name || 'PrimeTrade',
+      brand_name: f.brand_name || 'CommerceX',
       tagline: f.tagline || 'Premium Goods',
       description: f.description || 'Your trusted partner for premium quality products.',
-      copyright: f.copyright || '© 2026 PrimeTrade. All rights reserved.',
+      copyright: f.copyright || '© 2026 CommerceX. All rights reserved.',
       address: f.address || '',
       phone: f.phone || '',
       email: f.email || '',
@@ -196,7 +196,7 @@ export const HeaderFooterEditor = () => {
       <div className="bg-card rounded-xl border border-border p-6 space-y-4">
         <h3 className="font-semibold text-foreground">Header Settings</h3>
         <p className="text-sm text-muted-foreground">Brand name & tagline shown when no logo is uploaded.</p>
-        <FormField label="Brand Name"><Input value={header.brand_name} onChange={(e) => setHeader({ ...header, brand_name: e.target.value })} placeholder="PrimeTrade" /></FormField>
+        <FormField label="Brand Name"><Input value={header.brand_name} onChange={(e) => setHeader({ ...header, brand_name: e.target.value })} placeholder="CommerceX" /></FormField>
         <FormField label="Tagline"><Input value={header.tagline} onChange={(e) => setHeader({ ...header, tagline: e.target.value })} placeholder="Premium Goods" /></FormField>
         <FormField label="Search Placeholder"><Input value={header.search_placeholder} onChange={(e) => setHeader({ ...header, search_placeholder: e.target.value })} placeholder="Search products..." /></FormField>
         <div className="grid grid-cols-2 gap-4">
@@ -262,7 +262,7 @@ export const HeaderFooterEditor = () => {
 
       <div className="bg-card rounded-xl border border-border p-6 space-y-4">
         <h3 className="font-semibold text-foreground">Footer Settings</h3>
-        <FormField label="Brand Name"><Input value={footer.brand_name} onChange={(e) => setFooter({ ...footer, brand_name: e.target.value })} placeholder="PrimeTrade" /></FormField>
+        <FormField label="Brand Name"><Input value={footer.brand_name} onChange={(e) => setFooter({ ...footer, brand_name: e.target.value })} placeholder="CommerceX" /></FormField>
         <FormField label="Tagline"><Input value={footer.tagline} onChange={(e) => setFooter({ ...footer, tagline: e.target.value })} placeholder="Premium Goods" /></FormField>
         <FormField label="Description"><Textarea rows={3} value={footer.description} onChange={(e) => setFooter({ ...footer, description: e.target.value })} /></FormField>
         <FormField label="Copyright Text"><Input value={footer.copyright} onChange={(e) => setFooter({ ...footer, copyright: e.target.value })} placeholder="© 2026 Company. All rights reserved." /></FormField>

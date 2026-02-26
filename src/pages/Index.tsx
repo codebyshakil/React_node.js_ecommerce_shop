@@ -167,7 +167,7 @@ const Index = () => {
 
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'WebSite',
-    name: 'PrimeTrade', url: window.location.origin,
+    name: 'CommerceX', url: window.location.origin,
     description: 'Premium quality products sourced from around the world.',
   };
 

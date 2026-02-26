@@ -38,7 +38,7 @@ INSERT INTO public.shipping_zones (name, type) VALUES ('Standard Shipping', 'fla
 
 -- Insert default site settings for new features
 INSERT INTO site_settings (key, value) VALUES
-  ('site_title', '"PrimeTrade"'::jsonb),
+  ('site_title', '"CommerceX"'::jsonb),
   ('site_description', '"Premium quality products sourced worldwide"'::jsonb),
   ('site_logo_url', '""'::jsonb),
   ('favicon_url', '""'::jsonb),

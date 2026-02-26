@@ -21,15 +21,15 @@ const Footer = () => {
   const { data: footerData } = usePageContent("footer_settings");
   const f = footerData && typeof footerData === "object" ? footerData as any : {};
 
-  const brandName = f.brand_name || "PrimeTrade";
+  const brandName = f.brand_name || "CommerceX";
   const tagline = f.tagline || "Premium Goods";
   const description =
   f.description ||
   "Your trusted partner for premium quality products. Sourcing the finest goods from around the world since 2010.";
-  const copyright = f.copyright || "© 2026 PrimeTrade. All rights reserved.";
+  const copyright = f.copyright || "© 2026 CommerceX. All rights reserved.";
   const address = f.address || "123 Business Avenue, Suite 100, New York, NY 10001";
   const phone = f.phone || "+1 (555) 123-4567";
-  const email = f.email || "info@primetrade.com";
+  const email = f.email || "info@estelweb.com";
   const quickLinks = Array.isArray(f.quick_links) ? f.quick_links : defaultQuickLinks;
   const policyLinks = Array.isArray(f.policy_links) ? f.policy_links : defaultPolicyLinks;
 

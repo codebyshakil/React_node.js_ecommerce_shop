@@ -337,7 +337,7 @@ const Register = () => {
                 <UserPlus className="w-7 h-7 text-primary" />
               </div>
               <h1 className="text-3xl font-display font-bold text-foreground">Create Account</h1>
-              <p className="text-muted-foreground mt-2">Join PrimeTrade today</p>
+              <p className="text-muted-foreground mt-2">Join CommerceX today</p>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

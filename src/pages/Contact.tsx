@@ -21,7 +21,7 @@ const Contact = () => {
   const info = contactInfo && typeof contactInfo === 'object' ? contactInfo as any : {
     address: '123 Business Avenue, Suite 100\nNew York, NY 10001',
     phone: '+1 (555) 123-4567',
-    email: 'info@primetrade.com',
+    email: 'info@estelweb.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM',
   };
 

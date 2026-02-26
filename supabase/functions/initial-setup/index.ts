@@ -803,7 +803,7 @@ Deno.serve(async (req) => {
     // ========================================
     console.log('Step 4: Setting site settings...')
     const settingsToUpsert = [
-      { key: 'site_title', value: site_title || 'My Store' },
+      { key: 'site_title', value: site_title || 'CommerceX' },
       { key: 'site_description', value: site_description || '' },
       { key: 'site_logo_url', value: site_logo || '' },
       { key: 'currency_settings', value: { code: currency_code || 'BDT', symbol: currency_symbol || '৳', position: currency_position || 'before' } },

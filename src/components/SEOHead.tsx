@@ -10,7 +10,7 @@ interface SEOProps {
 
 const SEOHead = ({ title, description, ogImage, type = 'website', jsonLd }: SEOProps) => {
   useEffect(() => {
-    const fullTitle = `${title} | PrimeTrade`;
+    const fullTitle = `${title} | CommerceX`;
     document.title = fullTitle;
 
     const setMeta = (name: string, content: string, property = false) => {
