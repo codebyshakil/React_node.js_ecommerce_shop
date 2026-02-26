@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ChevronLeft, ChevronRight, Eye, EyeOff, Loader2, Settings, Rocket } from 'lucide-react';
 
 const STEPS = [
+  { id: 'database', title: 'Database', icon: Settings, desc: 'Connect your Supabase database' },
   { id: 'admin', title: 'Admin Account', icon: Settings, desc: 'Create your admin account' },
   { id: 'finish', title: 'Complete', icon: Rocket, desc: 'Finish installation' },
 ];
@@ -28,12 +29,14 @@ const Install = () => {
   const [showPw, setShowPw] = useState(false);
   const [installProgress, setInstallProgress] = useState('');
 
+  const [dbUrl, setDbUrl] = useState('');
   const [adminName, setAdminName] = useState('');
   const [adminEmail, setAdminEmail] = useState('');
   const [adminPassword, setAdminPassword] = useState('');
 
   const canNext = () => {
-    if (step === 0) return adminName.trim() && adminEmail.trim() && adminPassword.length >= 6;
+    if (step === 0) return dbUrl.trim().startsWith('postgresql://');
+    if (step === 1) return adminName.trim() && adminEmail.trim() && adminPassword.length >= 6;
     return true;
   };
 
@@ -44,6 +47,7 @@ const Install = () => {
       
       const { data, error } = await supabase.functions.invoke('initial-setup', {
         body: {
+          db_url: dbUrl.trim(),
           admin_email: adminEmail.trim().toLowerCase(),
           admin_password: adminPassword,
           admin_name: adminName.trim(),
@@ -84,6 +88,24 @@ const Install = () => {
       case 0:
         return (
           <div className="space-y-4">
+            <Field label="Database URL" desc="Supabase Dashboard → Settings → Database → Connection string → URI">
+              <Input
+                type="text"
+                value={dbUrl}
+                onChange={e => setDbUrl(e.target.value)}
+                placeholder="postgresql://postgres.xxxxx:PASSWORD@aws-0-....pooler.supabase.com:6543/postgres"
+                className="font-mono text-xs"
+              />
+            </Field>
+            <div className="bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground space-y-1">
+              <p>📌 <strong>কোথায় পাবেন:</strong> Supabase Dashboard → Settings → Database → Connection string → URI</p>
+              <p>⚠️ <code>[YOUR-PASSWORD]</code> এর জায়গায় আপনার ডেটাবেস পাসওয়ার্ড বসান</p>
+            </div>
+          </div>
+        );
+      case 1:
+        return (
+          <div className="space-y-4">
             <Field label="Full Name" desc="Admin account holder's name">
               <Input value={adminName} onChange={e => setAdminName(e.target.value)} placeholder="John Doe" />
             </Field>
@@ -105,7 +127,7 @@ const Install = () => {
             </Field>
           </div>
         );
-      case 1:
+      case 2:
         return (
           <div className="space-y-6 text-center">
             {loading ? (
